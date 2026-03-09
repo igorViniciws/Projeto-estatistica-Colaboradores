@@ -18,11 +18,18 @@ def calcular_variancia():
     return variancia       
     pass
 
-def obter_extremos():
-    pass
+def obter_extremos(dados):
+    menor = min(dados)
+    maior = max(dados)
+    return menor, maior
 
 dados = limpar_dados(dados_sujos)
 variancia = calcular_variancia(dados)
 
 print(f" Dados processados : {dados}")
 print(f"Variancia dos dados processados: {variancia} ")
+
+menor, maior = obter_extremos(dados)
+
+print(f"Menor valor é: {menor}")
+print(f"Maior valor é: {maior}")
